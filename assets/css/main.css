@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark:#140F01;
+  --color-light:#F3ECB5;
+  --color-primary:#D0B90A;
+  --color-secondary:#F9E44A;
+
+  --font-display: "Lora", serif;
+  --font-body: "Lato", sans-serif;
+  --font-jft: "Playwrite US Trad", sans-serif;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1170px;
+}
+
+
+body {
+  @apply font-body bg-dark text-light;
+}
+
+ .menu li a{
+  @apply hover:text-primary duration-200
+ }
+ .router-link-active{
+  @apply text-primary
+ }
+ .btn{
+  @apply bg-primary text-dark py-3 px-5  hover:bg-secondary cursor-pointer  duration-200 w-max ;
+ }
+
+ .input{
+  @apply  text-light py-2 w-full border-b border-light/50;
+ }
+ 
+ select option{
+  @apply text-dark hover:bg-light aria-selected:bg-light;
+ }
+
+
+ .slide-enter-active,
+.slide-leave-active {
+ 
+  @apply duration-300 translate-x-0 ;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    @apply -translate-x-full ;
+  
+}
