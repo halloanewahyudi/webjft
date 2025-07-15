@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="container min-h-[90vh] flex flex-col justify-center">
+      <div class="container min-h-[90vh] flex flex-col justify-center pt-20 bg-dark/80 lg:bg-transparent">
       <div class="max-w-[560px] flex flex-col gap-6">
       <div>
       <h1 class="text-3xl lg:text-5xl font-bold font-display">Get in <span class="text-primary">  Touch</span></h1>

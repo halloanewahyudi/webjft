@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mt-40">
+    <div class="pt-40">
       <div class="container">
         <div class="text-center">
           <h1 class="text-5xl lg:text-8xl font-bold font-display text-primary mb-3">

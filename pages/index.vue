@@ -1,6 +1,6 @@
 <template>
   <div>
-     <div class="container min-h-[90vh] flex flex-col justify-center">
+     <div class="container min-h-screen flex flex-col justify-center">
      <div class="max-w-[620px] flex flex-col gap-4">
      <h4 class="font-jft ">Juan Felix Tampubolon</h4>
      <h1 class="text-3xl lg:text-5xl font-bold font-display text-primary">Your trusted partner for legal solutions</h1>

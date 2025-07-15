@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[url('/img/lawyer.jpg')] bg-no-repeat  bg-top min-h-screen ">
+  <div class="bg-[url('/img/lawyer.jpg')] bg-no-repeat bg-top  ">
   <navbar />
     <slot />
   </div>

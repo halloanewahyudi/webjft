@@ -52,3 +52,18 @@ body {
     @apply -translate-x-full ;
   
 }
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  @apply transition-all duration-500 ease-in-out;
+}
+.slide-up-enter-from,
+.slide-up-leave-to {
+  @apply translate-y-0 opacity-100;
+}
+.slide-up-leave-from {
+  @apply translate-y-0 opacity-100;
+}
+.slide-up-leave-to {
+  @apply -translate-y-full opacity-0;
+}
