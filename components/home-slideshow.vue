@@ -58,7 +58,7 @@ const carouselConfig = {
   gap:30,
   arrows: false,
   mouseWheel: true,
-  wrapAround: true,
+ // wrapAround: true,
   transition: 1500,
 };
 

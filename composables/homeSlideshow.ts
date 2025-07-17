@@ -20,11 +20,21 @@ export const useHomeSlideshow = () => {
         link: "/lawyer"
       }
     },
+     {
+      preTitle: "",
+      title: "Legal Insights for Everyday Life",
+      description: "Get legal information on this website.",
+      image: "/img/law-1.jpg",
+      button: {
+        text: "Learn More",
+        link: "/lawyer"
+      }
+    },
     {
       preTitle: "Juan Felix Tampubolon",
       title: "Get in Touch",
       description: "Please schedule a consultation with us.",
-      image: "/img/man-bg.jpg",
+      image: "/img/law-3.jpg",
       button: {
         text: "Call Us Now",
         link: "/contact"
