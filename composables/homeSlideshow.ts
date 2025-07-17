@@ -4,7 +4,7 @@ export const useHomeSlideshow = () => {
       preTitle: "Juan Felix Tampubolon",
       title: "Your trusted partner for legal solutions",
       description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deserunt et eos molestiae cupiditate nihil officiis inventore voluptate facilis expedita veritatis quia odio rerum fuga, libero modi at pariatur officia.",
-      image: "/img/man-bg.jpg",
+      image: "/img/home-slide-1.jpg",
       button: {
         text: "Learn More",
         link: "/about"
