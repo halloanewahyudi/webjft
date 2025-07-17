@@ -8,10 +8,9 @@
      
       <div :class="openMenu ? 'block' : 'hidden lg:block'" class="menu absolute top-[60px] lg:top-auto left-0 w-full p-4 lg:p-0 bg-dark lg:bg-transparent lg:static lg:w-max">
       <ul class="flex flex-col lg:flex-row lg:items-center gap-4">
-        <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/about">About</NuxtLink></li>
-         <li><NuxtLink to="/lawyer">Lawyer</NuxtLink></li>
-        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
+          <li v-for="menu in menus" :key="menu">
+        <nuxt-link :to="menu.link" class="hover:text-primary duration-300 block mb-2"> {{ menu.name }} </nuxt-link>
+      </li>
       </ul>
       </div>
 
@@ -22,6 +21,8 @@
 
 <script lang="ts" setup>
  const openMenu = ref(false);
+
+const { menus } = useMenus();
 </script>
 
 <style>

@@ -1,8 +1,9 @@
 <template>
   <div  >
 
-    <navbar :class="route.path === '/about' ? 'absolute top-0 left-0 w-full z-50' : ''" />
+    <Navbar />
       <slot />
+      <Footer class="py-4 bg-dark text-light" />
   </div>
 </template>
 

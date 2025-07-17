@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   },
 
   modules: ["@nuxt/fonts", "@nuxt/icon", "vue3-carousel-nuxt"],
-  plugins: ["~/plugins/gsap.client.ts"],
+ 
 
   fonts: {
     google: [

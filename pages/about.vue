@@ -1,58 +1,48 @@
 <template>
   <div class="">
- <div class="relative">
-     <Splide
-  :options="{
-    type: 'loop',
-    rewind: true,
-    autoplay: true,
-    speed: 1500,
-    interval: 3000,
-    arrows: false, // <- nonaktifkan default arrows
-    pagination: false,
-  }"
-  aria-label="My Favorite Images"
-  class="relative"
-  ref="splideRef"
->
-  <!-- Slides -->
-  <SplideSlide v-for="slide in milestone" :key="slide.year">
-    <div
-      class="flex flex-col justify-end h-full min-h-screen w-full bg-top-center bg-cover"
-      :style="{ backgroundImage: `url(${slide.image})` }"
-    >
-      <div class="max-w-[440px] p-6 lg:p-10 text-center lg:text-left mb-16 lg:mb-0">
-        <h4 class="text-xl lg:text-4xl font-bold font-display text-primary">
-          {{ slide.year }}
-        </h4>
-        <p class="text-sm lg:text-xl">{{ slide.title }}</p>
-      </div>
-    </div>
-  </SplideSlide>
-
-</Splide>
-
- <!-- Custom Arrows -->
-  <div class="absolute bottom-5 right-5 z-50  flex  items-center">
-    <div class="">
-      <button @click="goPrev" class="bg-primary/70 p-2">
-       <Icon name="fluent:arrow-left-20-filled" />
-      </button>
-    </div>
-    <div class="">
-      <button @click="goNext" class="bg-primary/70 p-2">
-        <Icon name="fluent:arrow-right-20-filled" />
-      </button>
-    </div>
-  </div>
-
-      <div class="text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" >
+    <div class="bg-[url('/img/law-1.jpg')] bg-no-repeat bg-bottom py-40">
+      <div class="container flex flex-col justify-center h-full items-center">
         <h1 class="text-5xl lg:text-8xl font-bold font-display text-primary mb-3">
           About Us
         </h1>
-        <p class="text-lg">Our team is ready to assist you</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
+    <section>
+      <div class="container">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 lg:divide-x divide-light/30 items-center"
+        >
+          <div class="flex flex-col justify-center items-center gap-3 p-6">
+            <!--  item -->
+            <Icon name="fluent:calendar-28-regular" class="text-3xl text-primary" />
+            <Counter :to="30" :duration="1500" class="font-display" />
+
+            <p class="text-sm">Years Of Experience</p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-3 p-6">
+            <!--  item -->
+            <Icon name="fluent:gavel-24-filled" class="text-3xl text-primary" />
+            <div class="flex items-end gap-2">
+              <Counter :to="98" :duration="1500" class="font-display" /><span
+                class="text-xl"
+                >%</span
+              >
+            </div>
+
+            <p class="text-sm">Successful cases</p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center gap-3 p-6">
+            <!--  item -->
+            <Icon name="fluent:shield-person-add-20-filled" class="text-3xl text-primary" />
+            <Counter :to="1200" :duration="1500" class="font-display" />
+            <p class="text-sm">Personal Injury Cases</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="my-20">
       <!-- section services -->
@@ -84,6 +74,18 @@
         <div></div>
       </div>
     </section>
+
+    <section class="mb-20">
+    <div class="container">
+     <Cta />
+    </div>
+    </section>
+
+    <section class="mb-20">
+      <div class="container">
+        <NewsLine />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -98,15 +100,15 @@ definePageMeta({
 const { services } = useServices();
 const { milestone } = useMilestone();
 
-const splideRef = ref()
+const splideRef = ref();
 
 const goPrev = () => {
-  splideRef.value?.splide?.go('<')
-}
+  splideRef.value?.splide?.go("<");
+};
 
 const goNext = () => {
-  splideRef.value?.splide?.go('>')
-}
+  splideRef.value?.splide?.go(">");
+};
 </script>
 
 <style></style>

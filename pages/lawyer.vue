@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="pt-40">
-      <div class="container">
+    <div class="bg-[url('/img/lawyer.jpg')] bg-no-repeat bg-top">
+      <div class="container pt-40">
         <div class="text-center">
           <h1 class="text-5xl lg:text-8xl font-bold font-display text-primary mb-3">
             Lawyer
@@ -14,25 +14,50 @@
             class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10 lg:gap-10 justify-center items-center"
           >
             <div v-for="(lawyer, index) in lawyers" :key="lawyer.name">
-              <div @click="selectedLawyer(index)" class="text-center p-4 border border-light/50 hover:border-primary/50 duration-300 hover:bg-primary/10 cursor-pointer">
+              <div
+                @click="selectedLawyer(index)"
+                class="text-center p-4 border border-light/50 hover:border-primary/50 duration-300 hover:bg-primary/10 cursor-pointer"
+              >
                 <div
-                  class="max-w-[200px] mx-auto bg-primary relative  hover:shadow-2xl shadow-light/25 duration-300 overflow-hidden"
+                  class="max-w-[200px] mx-auto bg-primary relative hover:shadow-2xl shadow-light/25 duration-300 overflow-hidden"
                 >
-                  <img 
+                  <img
                     :src="lawyer.image"
                     alt=""
-                    class="w-full max-w-[200px] mx-auto  group-hover:scale-110 duration-300"
+                    class="w-full max-w-[200px] mx-auto group-hover:scale-110 duration-300"
                   />
-
                 </div>
-
                 <h4>{{ lawyer.name }}</h4>
               </div>
             </div>
           </div>
         </section>
 
-       
+        <section class="mb-20">
+          <div class="container">
+            <Cta />
+          </div>
+        </section>
+
+        <section class="mb-20">
+          <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
+              <div class="flex flex-col gap-4"> <!-- kiri -->
+                <h2 class="text-3xl font-bold font-display text-primary">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, autem?
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cumque
+                  laborum doloremque cupiditate voluptas? Consequuntur quis quasi
+                  molestias dolore.
+                </p>
+              </div>
+                <div> <!-- kanan --> 
+                  <img src="/img/slide-2.jpg" alt="">
+                </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
 
@@ -70,12 +95,9 @@
 </template>
 
 <script lang="ts" setup>
-definePageMeta({
-  layout: "lawyer",
-});
+definePageMeta({});
 
 const { lawyers } = useLawyer();
-
 
 const selectLawyer = ref(null);
 const selectedLawyer = (index) => {

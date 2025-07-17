@@ -59,7 +59,7 @@ body {
 }
 .slide-up-enter-from,
 .slide-up-leave-to {
-  @apply translate-y-0 opacity-100;
+  @apply translate-y-0 ;
 }
 .slide-up-leave-from {
   @apply translate-y-0 opacity-100;
@@ -67,3 +67,4 @@ body {
 .slide-up-leave-to {
   @apply -translate-y-full opacity-0;
 }
+

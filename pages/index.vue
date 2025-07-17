@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  //  layout: "jft"
+    layout: "home"
 });
 
 </script>

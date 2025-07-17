@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-[url('/img/lawyer.jpg')] bg-no-repeat bg-top  ">
-  <navbar />
+  <div>
+  <Navbar />
     <slot />
   </div>
 </template>
