@@ -8,7 +8,7 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       </div>
     </div>
-    <section>
+    <section class="">
       <div class="container">
         <div
           class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 lg:divide-x divide-light/30 items-center"

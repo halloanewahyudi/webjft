@@ -6,8 +6,8 @@ export const useHomeSlideshow = () => {
       description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deserunt et eos molestiae cupiditate nihil officiis inventore voluptate facilis expedita veritatis quia odio rerum fuga, libero modi at pariatur officia.",
       image: "/img/man-bg.jpg",
       button: {
-        text: "",
-        link: ""
+        text: "Learn More",
+        link: "/about"
       }
     },
     {
