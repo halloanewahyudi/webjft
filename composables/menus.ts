@@ -15,11 +15,11 @@ export const useMenus = () => {
     },
     {
       name: "News",
-      link: "/news"
+      link: "#"
     },
     {
       name: "Contact",
-      link: "/contact"
+      link: "#"
     }
   ])
   return {

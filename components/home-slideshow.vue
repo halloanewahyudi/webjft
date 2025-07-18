@@ -3,24 +3,24 @@
     <Carousel
       v-bind="carouselConfig"
       ref="homeSlideshow"
-      @init="handleInit"
-      @slide-start="handleSlideStart"
+      v-model:currentSlide="currentSlide"
+       @init="handleInit"
+  @slide-start="handleStart"
     >
-      <Slide v-for="slide in slideshows" :key="slide">
+      <Slide v-for="(slide, index) in slideshows" :key="index">
         <img :src="slide.image" alt="" class="w-full h-screen object-cover absolute top-0 left-0">
           <div class="container min-h-screen flex flex-col justify-center relative">
-            <div class="slide-content max-w-[540px] flex flex-col gap-4">
-              <h4 class="font-jft" v-if="slide.preTitle">{{ slide.preTitle }}</h4>
-              <h1 class="text-3xl lg:text-5xl font-bold font-display text-primary">
+            <div class="slide-content max-w-[540px] flex flex-col gap-5">
+            <div class="text-light"> 
+            <h4 class="font-jft mb-3" v-if="slide.preTitle">{{ slide.preTitle }}</h4>
+              <h1 class="text-3xl lg:text-7xl font-display text-primary uppercase">
                 {{ slide.title }}
               </h1>
-              <p class="text-lg">
+            </div>
+              <p class="text-lg text-light">
                 {{ slide.description }}
               </p>
-             
                   <nuxt-link v-if="slide.button && slide.button.link "  :to="slide.button.link" class="btn">{{slide.button.text }}</nuxt-link>
-             
-
             </div>
           </div>
       </Slide>
@@ -30,7 +30,7 @@
           <div class="max-w-[540px] w-full absolute  bottom-10 z-50 bg-secondary/40 hidden lg:block">
             <div
               class="h-0.5 bg-primary transition-all duration-300"
-              :style="{ width: `${progress}%` }"
+              :style="{ width: `${progress }%` }"
             ></div>
           </div>
 
@@ -49,45 +49,51 @@
 </template>
 
 <script lang="ts" setup>
+
+
 const { slideshows } = useHomeSlideshow();
 
 const carouselConfig = {
-  height: "100vh",
-  width: "100%",
   pagination: false,
-  gap:30,
+  gap: 0,
   arrows: false,
   mouseWheel: true,
  // wrapAround: true,
   transition: 1500,
 };
 
-const homeSlideshow = ref(null);
-
-const numberSlide = ref(6);
-const slide = ref(null);
+const homeSlideshow = ref<any>(null);
+const currentSlide = ref(1);
+const totalSlides = ref(0);
+const slideIndex = ref(0);
 
 const progress = computed(() => {
-    return (slide.value / numberSlide.value) * 100
- //  return (slide.value / numberSlide.value) * 100;
+   slideIndex.value = currentSlide.value;
+  return (currentSlide.value   / totalSlides.value  ) * 100;
 });
-
 const handleInit = () => {
-  console.log("Carousel initialized");
+  currentSlide.value = 1;
 };
-const handleSlideStart = (data) => {
-  numberSlide.value = data.slidesCount;
-  slide.value = data.currentSlideIndex + 1;
-  console.log("Slide started:", data);
+
+const handleStart = (data: any) => {
+  console.log('SLIDE END EVENT:', data);
+  currentSlide.value = data?.currentSlideIndex + 1;
+  totalSlides.value = data?.slidesCount ;
+  slideIndex.value = data?.slidingToIndex ;
 };
 
 const slideNext = () => {
   homeSlideshow.value?.next();
-}
+};
 
 const slidePrev = () => {
   homeSlideshow.value?.prev();
-}
+};
+
+onMounted(() => {
+  homeSlideshow.value?.slideTo(0, true);
+});
+
 </script>
 
 <style scoped>

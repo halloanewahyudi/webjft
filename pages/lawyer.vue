@@ -1,22 +1,27 @@
 <template>
   <div>
-    <div class="bg-[url('/img/lawyer.jpg')] bg-no-repeat bg-top">
-      <div class="container pt-40">
-        <div class="text-center">
-          <h1 class="text-5xl lg:text-8xl font-bold font-display text-primary mb-3">
-            Lawyer
-          </h1>
-          <p class="text-lg">Our team is ready to assist you</p>
-        </div>
+    <div class=""> 
 
-        <section class="max-w-screen-md mx-auto mt-52 mb-20">
+      <section class="min-h-[580px] py-20 px-6 lg:px-10 bg-[url('/img/sl-2.jpg')] bg-no-repeat bg-cover bg-right flex flex-col justify-center text-light mb-20"><!-- banner -->
+        <div class="container">
+          <div class="max-w-[680px]">
+            <h1 class="text-5xl lg:text-8xl font-bold font-display  mb-3">
+              Lawyer
+            </h1>
+            <p class="text-lg">Our team is ready to assist you</p>
+          </div>
+        </div>
+      </section> <!-- end banner -->
+
+      
+        <section class="max-w-screen-md mx-auto  mb-20">
           <div
             class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10 lg:gap-10 justify-center items-center"
           >
             <div v-for="(lawyer, index) in lawyers" :key="lawyer.name">
               <div
                 @click="selectedLawyer(index)"
-                class="text-center p-4 border border-light/50 hover:border-primary/50 duration-300 hover:bg-primary/10 cursor-pointer"
+                class="text-center p-4 border border-gray-300 hover:border-primary/50 duration-300 hover:bg-primary/10 cursor-pointer"
               >
                 <div
                   class="max-w-[200px] mx-auto bg-primary relative hover:shadow-2xl shadow-light/25 duration-300 overflow-hidden"
@@ -42,7 +47,8 @@
         <section class="mb-20">
           <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10 items-center">
-              <div class="flex flex-col gap-4"> <!-- kiri -->
+              <div class="flex flex-col gap-4">
+                <!-- kiri -->
                 <h2 class="text-3xl font-bold font-display text-primary">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, autem?
                 </h2>
@@ -52,19 +58,20 @@
                   molestias dolore.
                 </p>
               </div>
-                <div> <!-- kanan --> 
-                  <img src="/img/slide-2.jpg" alt="">
-                </div>
+              <div>
+                <!-- kanan -->
+                <img src="/img/slide-2.jpg" alt="" />
+              </div>
             </div>
           </div>
         </section>
-      </div>
+      
     </div>
 
     <transition name="slide">
       <div
         v-if="selectLawyer"
-        class="fixed top-0 left-0 w-full lg:w-3/4 h-full bg-light/95 text-dark flex flex-col items-center justify-center z-50"
+        class="fixed top-0 left-0 w-full lg:w-3/4 h-full bg-light text-dark flex flex-col items-center justify-center z-50"
       >
         <button
           class="text-3xl absolute top-5 right-5 text-light bg-dark p-2 leading-0 cursor-pointer"

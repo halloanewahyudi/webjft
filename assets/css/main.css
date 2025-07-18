@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dark:#140F01;
-  --color-light:#F3ECB5;
-  --color-primary:#D0B90A;
-  --color-secondary:#F9E44A;
+  --color-dark:#1f221f;
+  --color-light:#fef1f1;
+  --color-primary:#e11818;
+  --color-secondary:#801d1c;
+  --color-tertiary:#F08C8C;
 
-  --font-display: "Lora", serif;
-  --font-body: "Lato", sans-serif;
+  --font-display: "Teko", sans-serif;
+  --font-body: "Karla", sans-serif;
   --font-jft: "Playwrite US Trad", sans-serif;
 }
 
@@ -19,17 +20,20 @@
 
 
 body {
-  @apply font-body bg-dark text-light;
+  @apply font-body  text-dark;
 }
 
  .menu li a{
-  @apply hover:text-primary duration-200
+  @apply hover:text-primary  duration-200
  }
  .router-link-active{
   @apply text-primary
  }
+ .site-title.router-link-active{
+  @apply text-light ;
+ }
  .btn{
-  @apply bg-primary text-dark py-3 px-5  hover:bg-secondary cursor-pointer  duration-200 w-max ;
+  @apply bg-primary text-light py-3 px-5  hover:bg-dark hover:text-light cursor-pointer  duration-200 w-max ;
  }
 
  .input{
@@ -66,5 +70,16 @@ body {
 }
 .slide-up-leave-to {
   @apply -translate-y-full opacity-0;
+}
+/* transition slide right active ----*/
+
+ .slide-right-enter-active,
+.slide-right-leave-active {
+  @apply duration-300 translate-x-0 ease-in ;
+}
+
+.slide-right-enter-from,
+.slide-right-leave-to {
+    @apply translate-x-full ;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container text-sm text-light/80 border-t border-light/10 py-10">
+    <div class="container text-sm text-light/80  py-10">
       <div class="flex flex-wrap justify-between   gap-6 lg:gap-10 mb-10">
         <div class="flex flex-col gap-3 max-w-[300px] w-full">
           <h4 class="font-jft">Juan Felix Tampubolon</h4>

@@ -4,9 +4,9 @@
     <div
       v-if="progress"
       ref="loaderRef"
-      class="load-layer fixed top-0 left-0 w-full h-1  bg-primary z-50 flex flex-col justify-center items-center duration-300 " :style="{ height: `${progress}%` }"
+      class="load-layer fixed top-0 left-0 w-full h-1  bg-light z-50 flex flex-col justify-center items-center duration-300 " :style="{ height: `${progress}%` }"
     >
-      <span class="text-3xl font-jft text-load animate-bounce">JFT</span>
+      <span class="text-3xl font-jft text-load animate-bounce text-primary">JFT</span>
 
     </div>
 </Transition>

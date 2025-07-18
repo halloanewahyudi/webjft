@@ -18,11 +18,11 @@ export default defineNuxtConfig({
   fonts: {
     google: [
       {
-        name: "Lato",
+        name: "Karla",
         weights: ["400", "700"],
       },
       {
-        name: "Lora",
+        name: "Teko",
         weights: ["600", "700"],
       },
       {
