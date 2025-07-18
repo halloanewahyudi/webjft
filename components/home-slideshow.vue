@@ -34,7 +34,7 @@
             ></div>
           </div>
 
-          <div class="flex items-center absolute  bottom-6 right-0 -left-1/2 translate-x-1/2 lg:left-auto z-50 gap-4 text-primary">
+          <div class="flex items-center absolute  bottom-6 right-10  lg:left-auto z-50 gap-4 text-primary">
           <button class="text-lg" @click="slidePrev">
             Prev
           </button>
