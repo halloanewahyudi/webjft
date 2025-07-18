@@ -33,13 +33,10 @@
             <!--  item -->
             <Icon name="fluent:gavel-24-filled" class="text-3xl text-primary" />
             <div class="flex items-end gap-2">
-              <Counter :to="98" :duration="1500" class="font-display" /><span
-                class="text-xl"
-                >%</span
-              >
+              <Counter :to="298" :duration="1500" class="font-display" />
             </div>
 
-            <p class="text-sm">Successful cases</p>
+            <p class="text-sm">Handling  cases</p>
           </div>
 
           <div class="flex flex-col justify-center items-center gap-3 p-6">
@@ -48,8 +45,8 @@
               name="fluent:shield-person-add-20-filled"
               class="text-3xl text-primary"
             />
-            <Counter :to="1200" :duration="1500" class="font-display" />
-            <p class="text-sm">Personal Injury Cases</p>
+            <Counter :to="78" :duration="1500" class="font-display" />
+            <p class="text-sm">Handling serious  cases</p>
           </div>
         </div>
       </div>
