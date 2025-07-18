@@ -12,7 +12,7 @@ export const useHomeSlideshow = () => {
     },
     {
       preTitle: "",
-      title: "Bringing 50 Years of Legal Experience to Your Advocate.",
+      title: "Bringing 50 Years of Justice Experience to Your Advocate.",
       description: "Decision Are A Professional Attorney & Lawyers Services Provider Institutions.",
       image: "/img/sl-2.jpg",
       button: {
@@ -22,8 +22,8 @@ export const useHomeSlideshow = () => {
     },
      {
       preTitle: "",
-      title: "Legal Insights for Everyday Life",
-      description: "Get legal information on this website.",
+      title: "Justice Insights for Everyday Life",
+      description: "Get justice information on this website.",
       image: "/img/sl-3.jpg",
       button: {
         text: "Learn More",

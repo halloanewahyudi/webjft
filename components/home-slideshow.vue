@@ -27,7 +27,7 @@
 
       <template #addons>
         <div class="container relative z-50 flex justify-between items-center ">
-          <div class="max-w-[540px] w-full absolute  bottom-10 z-50 bg-secondary/40 hidden lg:block">
+          <div class="max-w-[540px] w-full absolute  bottom-10 z-50 bg-light/60 hidden lg:block">
             <div
               class="h-0.5 bg-primary transition-all duration-300"
               :style="{ width: `${progress }%` }"
