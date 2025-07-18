@@ -126,12 +126,14 @@ onMounted(() => {
   transform: translateX(-10%); 
   transition: all 1s ease-in-out;
   transition-delay: 1s;
+  opacity: 0;
 }
 
 .carousel__slide.carousel__slide--active .slide-content{
   transform: translateX(0); 
   transition: all 1s ease-in-out;
   transition-delay: 1s;
+  opacity: 1;
 }
 
 .carousel__slide--next,

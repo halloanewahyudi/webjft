@@ -24,7 +24,7 @@
           <div class="flex flex-col justify-center items-center gap-3 p-6">
             <!--  item -->
             <Icon name="fluent:calendar-28-regular" class="text-3xl text-primary" />
-            <Counter :to="30" :duration="1500" class="font-display" />
+            <Counter :to="50" :duration="1500" class="font-display" />
 
             <p class="text-sm">Years Of Experience</p>
           </div>
@@ -36,7 +36,7 @@
               <Counter :to="298" :duration="1500" class="font-display" />
             </div>
 
-            <p class="text-sm">Handling  cases</p>
+            <p class="text-sm">National  cases</p>
           </div>
 
           <div class="flex flex-col justify-center items-center gap-3 p-6">
@@ -46,7 +46,7 @@
               class="text-3xl text-primary"
             />
             <Counter :to="78" :duration="1500" class="font-display" />
-            <p class="text-sm">Handling serious  cases</p>
+            <p class="text-sm">International  cases</p>
           </div>
         </div>
       </div>

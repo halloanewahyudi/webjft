@@ -1,9 +1,9 @@
 export const useHomeSlideshow = () => {
   const slideshows = ref([
     {
-      preTitle: "Juan Felix Tampubolon",
-      title: "Your trusted partner for legal solutions",
-      description: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet deserunt et eos molestiae cupiditate nihil officiis inventore.",
+      preTitle: "",
+      title: "Your trusted partner for justice solutions",
+      description: "Juan Felix Tampubolon & Partners have been serving with heart since 1970s.",
       image: "/img/sl-1.jpg",
       button: {
         text: "Learn More",
@@ -12,7 +12,7 @@ export const useHomeSlideshow = () => {
     },
     {
       preTitle: "",
-      title: "We Are Top Lawyers With 30 Years Os Experience",
+      title: "Bringing 50 Years of Legal Experience to Your Advocate.",
       description: "Decision Are A Professional Attorney & Lawyers Services Provider Institutions.",
       image: "/img/sl-2.jpg",
       button: {
