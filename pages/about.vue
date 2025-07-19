@@ -109,7 +109,7 @@
           <div class="max-w-screen-md mx-auto text-center mb-10 flex flex-col gap-4">
             <p class="font-jft">Why Choose Us ?</p>
             <h2 class="text-3xl lg:text-5xl font-bold">
-              We Are Top Lawyers With 30 Years Os Experience
+              We Are Top Lawyers With 50 Years Of Experience
             </h2>
             <p>
               Decision Are A Professional Attorney & Lawyers Services Provider
