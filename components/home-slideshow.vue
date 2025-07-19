@@ -26,13 +26,10 @@
       </Slide>
 
       <template #addons>
+   
+      
         <div class="container relative z-50 flex justify-between items-center ">
-          <div class="max-w-[540px] w-full absolute  bottom-10 z-50 bg-light/60 hidden lg:block">
-            <div
-              class="h-0.5 bg-primary transition-all duration-300"
-              :style="{ width: `${progress }%` }"
-            ></div>
-          </div>
+         <Pagination />
 
           <div class="flex items-center absolute  bottom-6 right-10  lg:left-auto z-50 gap-4 text-primary">
           <button class="text-lg" @click="slidePrev">
@@ -54,11 +51,12 @@
 const { slideshows } = useHomeSlideshow();
 
 const carouselConfig = {
-  pagination: false,
+  height: '100vh',
+  pagination: true,
   gap: 0,
   arrows: false,
   mouseWheel: true,
- // wrapAround: true,
+  wrapAround: true,
   transition: 1500,
 };
 
@@ -102,6 +100,8 @@ onMounted(() => {
   position: relative;
   width: 100%;
 }
+
+
 .carousel.carousel__slide{
   position: relative;
   width: 100%;
@@ -136,7 +136,5 @@ onMounted(() => {
   opacity: 1;
 }
 
-.carousel__slide--next,
-.carousel__slide--prev {
-}
+
 </style>

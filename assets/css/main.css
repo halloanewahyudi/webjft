@@ -83,3 +83,22 @@ body {
     @apply translate-x-full ;
 }
 
+.carousel{
+ 
+  --vc-pgn-gap:0;
+  --vc-pgn-height	:2px;
+  --vc-pgn-background-color: var(--color-light);
+  --vc-pgn-active-color	:var(--color-primary);
+  --vc-png-bottom	:40px;
+ 
+}
+
+.carousel__pagination{
+  @apply left-0 translate-x-1/2 hidden lg:flex w-full max-w-[480px] items-center ;
+} 
+.carousel__pagination-button{
+  @apply w-[150px] basis-sm ;
+}
+.carousel__pagination-button--active{
+  @apply h-1 ;
+}
